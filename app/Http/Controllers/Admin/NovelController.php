@@ -23,7 +23,7 @@ class NovelController extends Controller
      */
     public function create()
     {
-        //
+        return view('novels.create');
     }
 
     /**
