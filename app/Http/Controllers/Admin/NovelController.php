@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+//importo il modello Novel
+use App\Models\Novel;
 
 class NovelController extends Controller
 {
@@ -12,7 +14,8 @@ class NovelController extends Controller
      */
     public function index()
     {
-        //
+        $novels = Novel::all();
+        return view('novels.index', compact('novels'));
     }
 
     /**
