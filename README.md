@@ -7,10 +7,10 @@ Tramite gli appositi comandi artisan create un model con relativa migration e un
 
 ### Milestone 2
 Iniziate a definire le prime operazioni CRUD con le relative view:
-- index()
-- show()
-- create()
-- store()
+- index() elenco fumetti
+- show() dettaglio fumetto
+- create() creare nuovo fumetto
+- store() salvare nuovo fumetto
 
 ###### Bonus
 creare il seeder per la tabella comics utilizzando il file in allegato.
