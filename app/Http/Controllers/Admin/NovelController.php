@@ -37,9 +37,9 @@ class NovelController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Novel $novel)
     {
-        //
+        return view('novels.show', compact('novel'));
     }
 
     /**
