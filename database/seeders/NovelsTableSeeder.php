@@ -222,8 +222,8 @@ class NovelsTableSeeder extends Seeder
             $newNovel->series = $novel['series'];
             $newNovel->sale_date = $novel['sale_date'];
             $newNovel->type = $novel['type'];
-            $newNovel->artists = $novel['artists'];
-            $newNovel->writers = $novel['writers'];
+            $newNovel->artists = json_encode($novel['artists']);
+            $newNovel->writers = json_encode($novel['writers']);
             //salvo la classe con valori creata
             $newNovel->save();
         }
