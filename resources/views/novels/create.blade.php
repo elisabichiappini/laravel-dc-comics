@@ -67,15 +67,13 @@
             <!--description-->
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
-                <input type="text-area" class="form-control" id="description" name="description">
-            </div>
-            <!--/description-->
+                <textarea class="form-control" id="description" name="description" col="30" row="10"></textarea>
 
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1"><em>Not a computer</em></label>
             </div>
-            
+
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
         <!--/forum-->
