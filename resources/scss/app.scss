@@ -3,3 +3,8 @@
 
 // importo file variable.scss
 @import "_partials/variables.scss";
+
+.ec-img {
+    height: 350px;
+    object-fit: cover;
+}
