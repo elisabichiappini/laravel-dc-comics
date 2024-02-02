@@ -75,20 +75,23 @@ class NovelController extends Controller
     public function update(Request $request, Novel $novel)
     {
         $data = $request->all();
-        // 
-        $novel->title = $data['title'];
-        $novel->price = $data['price'];
-        $novel->series = $data['series'];
-        $novel->sale_date = $data['sale_date'];
-        $novel->type = $data['type'];
-        $novel->writers = $data['writers'];
-        $novel->artists = $data['artists'];
-        $novel->thumb = $data['thumb'];
-        $novel->description = $data['description'];
+        // 1 method to update edit
+        // setting input changes
+        // $novel->title = $data['title'];
+        // $novel->price = $data['price'];
+        // $novel->series = $data['series'];
+        // $novel->sale_date = $data['sale_date'];
+        // $novel->type = $data['type'];
+        // $novel->writers = $data['writers'];
+        // $novel->artists = $data['artists'];
+        // $novel->thumb = $data['thumb'];
+        // $novel->description = $data['description'];
 
-        $novel->save();
+        // $novel->save();
 
-        return redirect()->route('novels.show', $novel->id);
+        // 2 method to update edit
+        $novel->update($data);
+        // return redirect()->route('novels.show', $novel->id);
     }
     /**
      * Remove the specified resource from storage.
