@@ -6,11 +6,17 @@
     <!--main-->
     <main class="container py-5">
         <h2>Edit Novel: <span class="ec-text">{{ $novel->title }}</span></h2>
+        <!--link torna a index-->
+        <a href="{{ route('novels.index') }}">Torna alla lista delle paste</a>
+        <!--link torna a index-->
         <!--forum-->
-        <form action="#" method="POST">
+        <form class="py-3" action="{{ route('novels.update', $novel->id)}}" method="POST">
             <!--token-->
             @csrf
             <!--/token-->
+            <!--direttiva-->
+            @method('PUT')
+            <!--direttiva-->
             <!--title-->
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
@@ -70,17 +76,17 @@
             <!--description-->
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
-                <textarea class="form-control" id="description" name="description" cols="10" rows="5">{{ $novel->description}}</textarea>
+                <textarea class="form-control mb-3" id="description" name="description" cols="10" rows="5">{{ $novel->description}}</textarea>
             <!--description-->
 
             <!--checkbox-->
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1"><em>Not a computer</em></label>
+                <label class="form-check-label" for="exampleCheck1"><em>Check to confirm the changes</em></label>
             </div>
             <!--/checkbox-->
 
-            <button type="submit" class="btn btn-primary">Create</button>
+            <button type="submit" class="btn btn-primary">Save</button>
         </form>
         <!--/forum-->
     </main>

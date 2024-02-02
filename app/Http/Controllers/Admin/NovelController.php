@@ -72,11 +72,24 @@ class NovelController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Novel $novel)
     {
-        //
-    }
+        $data = $request->all();
+        // 
+        $novel->title = $data['title'];
+        $novel->price = $data['price'];
+        $novel->series = $data['series'];
+        $novel->sale_date = $data['sale_date'];
+        $novel->type = $data['type'];
+        $novel->writers = $data['writers'];
+        $novel->artists = $data['artists'];
+        $novel->thumb = $data['thumb'];
+        $novel->description = $data['description'];
 
+        $novel->save();
+
+        return redirect()->route('novels.show', $novel->id);
+    }
     /**
      * Remove the specified resource from storage.
      */

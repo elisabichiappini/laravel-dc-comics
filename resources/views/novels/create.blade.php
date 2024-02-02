@@ -7,7 +7,7 @@
     <main class="container py-5">
         <h2>New Novel</h2>
         <!--forum-->
-        <form action="{{ route('novels.store')}}" method="POST">
+        <form class="py-3" action="{{ route('novels.store')}}" method="POST">
             <!--token-->
             @csrf
             <!--/token-->
@@ -70,7 +70,7 @@
             <!--description-->
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
-                <textarea class="form-control" id="description" name="description" cols="10" rows="5"></textarea>
+                <textarea class="form-control mb-3" id="description" name="description" cols="10" rows="5"></textarea>
             <!--description-->
 
             <!--checkbox-->

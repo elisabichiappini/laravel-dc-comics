@@ -18,6 +18,9 @@
                     <!--link show novel-->
                     <a class="pb-1 nav-link ec-text" href="{{ route('novels.show', $item_novel->id) }}">More info</a>
                     <!--/link show novel-->
+                    <!--link show novel-->
+                    <a class="pb-1 nav-link ec-text" href="{{ route('novels.edit', $item_novel->id) }}">Edit Novels</a>
+                    <!--/link show novel-->
                 </div>
                 <!--card-->
             </div>
