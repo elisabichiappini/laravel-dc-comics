@@ -47,6 +47,9 @@ class NovelController extends Controller
         $novel->description = $data['description'];
         //salvo la novella caricata
         $novel->save();
+
+        //reindirizzo al dettaglio della nuova novel creata
+        return redirect()->route('novels.show', $novel->id);
     }
 
     /**

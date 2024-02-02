@@ -4,7 +4,7 @@
 {{--workspace yield--}}
 @section('main')
     <!--main-->
-    <main class="container">
+    <main class="container py-5">
         <h2>New Novel</h2>
         <!--forum-->
         <form action="{{ route('novels.store')}}" method="POST">
@@ -70,12 +70,15 @@
             <!--description-->
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
-                <textarea class="form-control" id="description" name="description" col="30" row="10"></textarea>
+                <textarea class="form-control" id="description" name="description" col="10" row="10"></textarea>
+            <!--description-->
 
+            <!--checkbox-->
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1"><em>Not a computer</em></label>
             </div>
+            <!--/checkbox-->
 
             <button type="submit" class="btn btn-primary">Create</button>
         </form>

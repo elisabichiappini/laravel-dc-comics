@@ -9,3 +9,17 @@
     height: 350px;
     object-fit: cover;
 }
+
+#ec-nav {
+    color: $primary;
+}
+
+header {
+    z-index: 500;
+    background-image: url('https://static.dc.com/2024-01/DC.com_20240201_HL_SuicideSquadExits_Marquee_3x1_.jpg?w=1200');
+    background-size: contain;
+}
+
+.ec-text {
+    color: $primary;
+}
