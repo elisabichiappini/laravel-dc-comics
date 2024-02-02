@@ -96,8 +96,9 @@ class NovelController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Novel $novel)
     {
-        //
+        $novel->delete();
+        return redirect()-> route('novels.index');
     }
 }
