@@ -70,7 +70,7 @@
             <!--description-->
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
-                <textarea class="form-control" id="description" name="description" col="10" row="10"></textarea>
+                <textarea class="form-control" id="description" name="description" cols="10" rows="5"></textarea>
             <!--description-->
 
             <!--checkbox-->

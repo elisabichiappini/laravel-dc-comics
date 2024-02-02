@@ -15,6 +15,7 @@ class NovelController extends Controller
     public function index()
     {
         $novels = Novel::all();
+        
         return view('novels.index', compact('novels'));
     }
 
@@ -63,9 +64,9 @@ class NovelController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Novel $novel)
     {
-        return view('novels.edit');
+        return view('novels.edit', compact('novel'));
     }
 
     /**

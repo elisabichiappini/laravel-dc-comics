@@ -15,7 +15,9 @@
                         <h5 class="card-title">{{ $item_novel->series}}</h5>
                         <p class="card-text">{{ $item_novel->type}}</p>
                     </div>
+                    <!--link show novel-->
                     <a class="pb-1 nav-link ec-text" href="{{ route('novels.show', $item_novel->id) }}">More info</a>
+                    <!--/link show novel-->
                 </div>
                 <!--card-->
             </div>
