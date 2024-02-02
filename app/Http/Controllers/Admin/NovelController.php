@@ -91,7 +91,7 @@ class NovelController extends Controller
 
         // 2 method to update edit
         $novel->update($data);
-        // return redirect()->route('novels.show', $novel->id);
+        return redirect()->route('novels.show', $novel->id);
     }
     /**
      * Remove the specified resource from storage.
