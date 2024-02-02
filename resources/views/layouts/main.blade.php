@@ -8,7 +8,7 @@
     @vite('resources/js/app.js')
     <!--/inclusione assets con direttiva vite-->
 </head>
-<body>
+<body class="pb-5">
     {{--header--}}
     @include('shared.header')
     {{--/header--}}

@@ -31,7 +31,22 @@ class NovelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $data = $request->all();
+        // istanzio la classe Novel
+        $novel = new Novel();
+        //collego i campi input ai nomi tabella
+        $novel->title = $data['title'];
+        $novel->price = $data['price'];
+        $novel->series = $data['series'];
+        $novel->sale_date = $data['sale_date'];
+        $novel->type = $data['type'];
+        $novel->writers = $data['writers'];
+        $novel->artists = $data['artists'];
+        $novel->thumb = $data['thumb'];
+        $novel->description = $data['description'];
+        //salvo la novella caricata
+        $novel->save();
     }
 
     /**

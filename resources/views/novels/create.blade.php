@@ -7,7 +7,10 @@
     <main class="container">
         <h2>New Novel</h2>
         <!--forum-->
-        <form>
+        <form action="{{ route('novels.store')}}" method="POST">
+            <!--token-->
+            @csrf
+            <!--/token-->
             <!--title-->
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
@@ -74,7 +77,7 @@
                 <label class="form-check-label" for="exampleCheck1"><em>Not a computer</em></label>
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Create</button>
         </form>
         <!--/forum-->
     </main>
