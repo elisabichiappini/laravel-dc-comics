@@ -12,13 +12,13 @@
         <a class="navbar-brand text-white" href="{{route('novel')}}">Home</a>
         <!--/link go to home-->
         <!--link list novels-->
-        <a class="navbar-brand text-white" href="{{ route ('novels.index')}}">Graphic Novels</a>
+        <a class="navbar-brand text-white" href="{{ route('novels.index')}}">Graphic Novels</a>
         <!--/link list novels-->
         <!--link add a novel-->
-        <a class="navbar-brand text-white" href="{{ route ('novels.create')}}">Add Novel</a>
+        <a class="navbar-brand text-white" href="{{ route('novels.create')}}">Add Novel</a>
         <!--/link add a novel-->
         <!--link edit novel-->
-        <a class="navbar-brand text-white" href="{{ route ('novels.create')}}">Edit Novel</a>
+        <a class="navbar-brand text-white" href="{{ route('novels.edit')}}">Edit Novel</a>
         <!--/link edit novel-->
     </nav>
     <!--/navbar-->

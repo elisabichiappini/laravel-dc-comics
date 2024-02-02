@@ -31,7 +31,7 @@ class NovelController extends Controller
      */
     public function store(Request $request)
     {
-        
+        //richiamo tutte le novels 
         $data = $request->all();
         // istanzio la classe Novel
         $novel = new Novel();
@@ -65,7 +65,7 @@ class NovelController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('novels.edit');
     }
 
     /**
