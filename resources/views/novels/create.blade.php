@@ -7,7 +7,7 @@
     <main class="container py-5">
         
         <!--list errors-->
-        @if ($errors->any())
+        @if($errors->any())
             <div class="alert alert-danger">
                 <ul>
                     @foreach ($errors->all() as $error)
@@ -26,22 +26,29 @@
             <!--/token-->
             <!--title-->
             <div class="mb-3">
+                <!--validazione per title-->
                 <label for="title" class="form-label">Title</label>
                 <input type="text" id="title" name="title" required class="form-control @error('title') is-invalid @enderror">
-
+                <!--/validazione per title-->
+                <!--definisco la direttiva error per title-->
                 @error('title')
                     <div class="alert alert-danger">{{ $message }}</div>                    
                 @enderror
+                <!--/definisco la direttiva error per title-->
             </div>
             <!--/title-->
             
             <!--price-->
             <div class="mb-3">
+                <!--validazione per title-->
                 <label for="price" class="form-label">Price</label>
-                <input type="text" class="form-control @error('price') is-invalid @enderror" id="price" name="price" required>
-                @error('title')
+                <input type="text" class="form-control @error('price') alert @enderror" id="price" name="price" required>
+                <!--/validazione per title-->
+                <!--definisco la direttiva error per price-->
+                @error('price')
                     <div class="alert alert-success">{{ $message }}</div>                    
                 @enderror
+                <!--definisco la direttiva error per price-->
             </div>
             <!--/price-->
 

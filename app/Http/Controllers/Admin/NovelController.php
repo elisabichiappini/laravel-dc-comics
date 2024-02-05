@@ -39,9 +39,9 @@ class NovelController extends Controller
             'title'=>'required|max:400',
             'type'=>'required|max:100',
             'thumb'=> 'required|url|ends_with: jpg, png, webp| max:400',
-            'description' => 'required| max:1200',
+            'description' => 'required|max:1200',
             'price' => 'required|max:7',
-            'series' => 'required| max:200',
+            'series' => 'required|max:200',
             'artists' => 'required|max:800',
             'writers' => 'required|max:800',
         ]);
