@@ -93,7 +93,7 @@ class NovelController extends Controller
      */
     public function update(Request $request, Novel $novel)
     {
-        $data = $request->all();
+        $data = $this->validation($request->all());
         // 1 method to update edit
         // setting input changes
         // $novel->title = $data['title'];
