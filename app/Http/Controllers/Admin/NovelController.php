@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreNovelRequest;
 use Illuminate\Http\Request;
 //importo il modello Novel
 use App\Models\Novel;
@@ -33,7 +34,7 @@ class NovelController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreNovelRequest $request)
     {
         // //validation
         // $request->validate([
@@ -52,7 +53,10 @@ class NovelController extends Controller
         // $data = $request->all();
 
         // variabile che richiama una funzione validation a cui passiamo tutti i dati
-        $data = $this->validation($request->all());
+        // $data = $this->validation($request->all());
+
+        $data = $request->validate();
+
         //istanzio la classe Novel
         $novel = new Novel();
         //collego i campi input ai nomi tabella
