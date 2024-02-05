@@ -32,9 +32,21 @@ class NovelController extends Controller
      */
     public function store(Request $request)
     {
+        //validation
+        $request->validate([
+            'title'=>'required|max:400',
+            'type'=>'required|max:100',
+            'thumb'=> 'required|url|ends_with: jpg, png, webp| max:400',
+            'description' => 'required| max:1200',
+            'price' => 'required|max:7',
+            'series' => 'required| max:200',
+            'artists' => 'required|max:800',
+            'writers' => 'required|max:800',
+        ]);
+
         //richiamo tutte le novels 
         $data = $request->all();
-        // istanzio la classe Novel
+        //istanzio la classe Novel
         $novel = new Novel();
         //collego i campi input ai nomi tabella
         $novel->title = $data['title'];

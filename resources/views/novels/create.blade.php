@@ -5,6 +5,19 @@
 @section('main')
     <!--main-->
     <main class="container py-5">
+        
+        <!--list errors-->
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+        <!--list errors-->
+
         <h2>New Novel</h2>
         <!--forum-->
         <form class="py-3" action="{{ route('novels.store')}}" method="POST">
