@@ -56,7 +56,7 @@
             <div class="mb-3">
                 <!--validazione per series-->
                 <label for="series" class="form-label">Series</label>
-                <input type="text" class="form-control @error('series') is-invalid @enderror" id="series" name="series" required value="{{ old('series')}}">
+                <input type="text" class="form-control @error('series') is-invalid @enderror" id="series" name="series" value="{{ old('series')}}">
                 <!--validazione per series-->
                 <!--definisco la direttiva error per series-->
                 @error('series')
@@ -70,7 +70,7 @@
             <div class="mb-3">
                 <!--validazione per sale_date-->
                 <label for="sale_date" class="form-label">Sale Date</label>
-                <input type="text" class="form-control @error('sale_date') is-invalid @enderror" id="sale_date" name="sale_date" required value="{{ old('sale_date')}}">
+                <input type="text" class="form-control @error('sale_date') is-invalid @enderror" id="sale_date" name="sale_date" value="{{ old('sale_date')}}">
                 <!--definisco la direttiva error per sale_date-->
                 @error('sale_date')
                     <div class="alert alert-danger">{{ $message }}</div>                    
@@ -83,7 +83,7 @@
             <div class="mb-3">
                 <!--validazione per type-->
                 <label for="type" class="form-label">Type</label>
-                <input type="text" class="form-control @error('type') is-invalid @enderror" id="type" name="type" required value="{{ old('type')}}">
+                <input type="text" class="form-control @error('type') is-invalid @enderror" id="type" name="type" value="{{ old('type')}}">
                 <!--validazione per type-->
                 <!--definisco la direttiva error per type-->
                 @error('type')
@@ -97,7 +97,7 @@
             <div class="mb-3">
                 <!--validazione per artists-->
                 <label for="artists" class="form-label">Artists</label>
-                <input type="text" class="form-control @error('artists') is-invalid @enderror" id="artists" name="artists" required value="{{ old('artists')}}">
+                <input type="text" class="form-control @error('artists') is-invalid @enderror" id="artists" name="artists" value="{{ old('artists')}}">
                 <!--definisco la direttiva error per artists-->
                 @error('artists')
                     <div class="alert alert-danger">{{ $message }}</div>                    
@@ -109,7 +109,7 @@
             <!--writers-->
             <div class="mb-3">
                 <label for="writers" class="form-label">Writers</label>
-                <input type="text" class="form-control @error('writers') is-invalid @enderror" id="writers" name="writers" required value="{{ old('writers')}}">
+                <input type="text" class="form-control @error('writers') is-invalid @enderror" id="writers" name="writers" value="{{ old('writers')}}">
                 <!--definisco la direttiva error per writers-->
                 @error('writers')
                     <div class="alert alert-danger">{{ $message }}</div>                    

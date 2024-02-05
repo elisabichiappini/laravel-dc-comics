@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreNovelRequest;
+use App\Http\Requests\UpdateNovelRequest;
 use Illuminate\Http\Request;
 //importo il modello Novel
 use App\Models\Novel;
@@ -95,9 +96,10 @@ class NovelController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Novel $novel)
+    public function update(UpdateNovelRequest $request, Novel $novel)
     {
-        $data = $this->validation($request->all());
+        // $data = $this->validation($request->all());
+        $data = $request->validate();
         // 1 method to update edit
         // setting input changes
         // $novel->title = $data['title'];
