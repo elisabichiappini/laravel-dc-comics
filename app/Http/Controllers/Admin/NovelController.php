@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 //importo il modello Novel
 use App\Models\Novel;
+use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Validator;
 
 class NovelController extends Controller
 {
