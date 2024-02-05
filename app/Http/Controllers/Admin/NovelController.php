@@ -36,14 +36,15 @@ class NovelController extends Controller
     {
         //validation
         $request->validate([
-            'title'=>'required|max:400',
-            'type'=>'required|max:100',
-            'thumb'=> 'required|url|ends_with: jpg, png, webp| max:400',
-            'description' => 'required|max:1200',
-            'price' => 'required|max:7',
-            'series' => 'required|max:200',
-            'artists' => 'required|max:800',
-            'writers' => 'required|max:800',
+            'title'=>'required|max:400|min:10',
+            'price' => 'required|max:7|min:4',
+            'series' => 'required|max:200|min:40',
+            'sale_date' => 'required|date_format:date',
+            'type'=>'required', Rule::in(['comic book', 'comic sans']),
+            'artists' => 'required|max:800|min:4',
+            'writers' => 'required|max:800|min:4',
+            'thumb'=> 'required|url|ends_with: jpg, png, webp|max:400',
+            'description' => 'required|max:1200|min:50',
         ]);
 
         //richiamo tutte le novels 
