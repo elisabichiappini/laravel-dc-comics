@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 //importo il modello Novel
 use App\Models\Novel;
 use Illuminate\Validation\Rule;
+//importo classe validator 
 use Illuminate\Support\Facades\Validator;
 
 class NovelController extends Controller
@@ -34,21 +35,24 @@ class NovelController extends Controller
      */
     public function store(Request $request)
     {
-        //validation
-        $request->validate([
-            'title'=>'required|max:400|min:10',
-            'price' => 'required|max:7|min:4',
-            'series' => 'required|max:200|min:40',
-            'sale_date' => 'required|date_format:date',
-            'type'=>'required', Rule::in(['comic book', 'comic sans']),
-            'artists' => 'required|max:800|min:4',
-            'writers' => 'required|max:800|min:4',
-            'thumb'=> 'required|url|ends_with: jpg, png, webp|max:400',
-            'description' => 'required|max:1200|min:50',
-        ]);
+        // //validation
+        // $request->validate([
+        //     'title'=>'required|max:400|min:10',
+        //     'price' => 'required|max:7|min:4',
+        //     'series' => 'required|max:200|min:40',
+        //     'sale_date' => 'required|date_format:date',
+        //     'type'=>'required', Rule::in(['comic book', 'comic sans']),
+        //     'artists' => 'required|max:800|min:4',
+        //     'writers' => 'required|max:800|min:4',
+        //     'thumb'=> 'required|url|ends_with: jpg, png, webp|max:400',
+        //     'description' => 'required|max:1200|min:50',
+        // ]);
 
-        //richiamo tutte le novels 
-        $data = $request->all();
+        // //richiamo tutte le novels 
+        // $data = $request->all();
+
+        // variabile che richiama una funzione validation a cui passiamo tutti i dati
+        $data = $this->validation($request->all());
         //istanzio la classe Novel
         $novel = new Novel();
         //collego i campi input ai nomi tabella
@@ -115,5 +119,31 @@ class NovelController extends Controller
     {
         $novel->delete();
         return redirect()-> route('novels.index');
+    }
+
+    //funzione di cui classe in alto a cui passo tutti i dati ricevuti per la validazione
+    private function validation($data) 
+    {
+        $validator = Validator::make($data, [
+            'title'=>'required|max:400|min:10',
+            'price' => 'required|max:7|min:4',
+            'series' => 'required|max:200|min:40',
+            'sale_date' => 'required|date_format:date',
+            'type' => ['required', Rule::in(['comic book', 'comic sans'])],
+            'artists' => 'required|max:800|min:4',
+            'writers' => 'required|max:800|min:4',
+            'thumb'=> 'required|url|ends_with: jpg, png, webp|max:400',
+            'description' => 'required|max:1200|min:50',
+        ], [
+            //personalizzazione di alcuni messaggi
+            'title.required' => 'Il titolo è obbligatorio',
+            'title.min' => 'Il titolo non può essere inferiore a :min caratteri',
+            'price.required' => 'Il prezzo è obbligatorio',
+            'type.rule' => 'La scelta di tipo è tra "comic book" e "comic sans"',
+            'thumb.url' => 'Thumb è un valore URL'
+            //esecuzione metodo validate
+        ])->validate();
+
+        return $validator;
     }
 }
