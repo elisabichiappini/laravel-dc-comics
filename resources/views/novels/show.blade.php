@@ -4,7 +4,7 @@
 {{--workspace yield--}}
 @section('main')
     <!--main-->
-    <main class="container py-5">
+    <main class="container ec-padding-body">
         <h2 class="text-center">Graphic Novel</h2>
         <div class="d-flex justify-content-center align-items-center py-3">
             <!--card-->

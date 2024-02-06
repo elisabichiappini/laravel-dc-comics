@@ -9,7 +9,7 @@
     <!--/inclusione assets con direttiva vite-->
 </head>
 
-<body class="py-5 my-5">
+<body>
     {{--header--}}
     @include('shared.header')
     {{--/header--}}

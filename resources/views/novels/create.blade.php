@@ -4,7 +4,7 @@
 {{--workspace yield--}}
 @section('main')
     <!--main-->
-    <main class="container py-5">
+    <main class="container ec-padding-body">
         
         {{-- <!--list errors-->
         @if($errors->any())

@@ -4,7 +4,7 @@
 {{--workspace yield--}}
 @section('main')
     <!--main-->
-    <main class="container py-5">
+    <main class="container ec-padding-body">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($novels as $item_novel )
             <div class="col">

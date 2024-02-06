@@ -12,18 +12,27 @@
 
 #ec-nav {
     color: $primary;
+    height: 90px;
 }
 
 header {
     z-index: 500;
-    background-color: rgb(189, 189, 5);
+    background-color: rgb(184, 184, 61);
 }
 
-.jumbotron {
+#ec-main {
     background-image: url('https://static.dc.com/2024-01/DC.com_20240201_HL_SuicideSquadExits_Marquee_3x1_.jpg?w=1200');
-    background-size: contain;
+    background-size: cover;
+    height: calc(100vh - 90px);
+    margin-top: 90px;
 }
 
 .ec-text {
     color: $primary;
+    height: 60px;
+}
+
+.ec-padding-body {
+    padding-top: 130px;
+    padding-bottom: 60px
 }

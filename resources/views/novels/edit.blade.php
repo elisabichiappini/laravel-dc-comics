@@ -15,7 +15,7 @@
         @endif
         <!--list errors-->
     <!--main-->
-    <main class="container py-5">
+    <main class="container ec-padding-body">
         <h2>Edit Novel: <span class="ec-text">{{ $novel->title }}</span></h2>
         <!--link torna a index-->
         <a href="{{ route('novels.index') }}">Torna alla lista delle paste</a>

@@ -1,8 +1,8 @@
 <!--header-->
-<header id="ec-nav" class="d-flex justify-content-between align-items-center position-fixed top-0 end-0 start-0 z-index">
+<header id="ec-nav" class="px-3 d-flex justify-content-between align-items-center position-fixed top-0 end-0 start-0 z-index">
     <!--intestazione-->
-    <div class="d-flex justify-content-center p-4">
-        <h1 class="fw-bolder">DC Comics</h1>
+    <div class="d-flex justify-content-center">
+        <h1 class="fw-bolder m-0"><em>Gestionale</em> DC Comics</h1>
     </div>
     
     <div>
@@ -17,6 +17,9 @@
             <!--link add a novel-->
             <a class="navbar-brand text-white" href="{{ route('novels.create') }}">Add Novel</a>
             <!--/link add a novel-->
+            <!--link to list all novels-->
+            <a href="#" class="btn btn-primary">Login</a>
+            <!--link to list all novels-->
         </nav>
         <!--/navbar-->
     </div>
